@@ -27,7 +27,7 @@ default['hazelcast']['hazelcast.jar.name'] = "hazelcast"
 default['hazelcast']['hazelcast.jar.version'] = "3.2.3"
 
 # Hazelcast Bootstrap War
-default['hazelcast']['hazelcast.bootstrap.war.loc'] = "https://check-mike-check.com/mother/content/groups/Releases/com/capitalone/upf/openupf/hazelcast-bootstrap3/openupf-hazelcast-bootstrap-web"
+default['hazelcast']['hazelcast.bootstrap.war.loc'] = "https://check-mike-check.com/mother/content/groups/Releases/com/checkmikecheck/upf/openupf/hazelcast-bootstrap3/openupf-hazelcast-bootstrap-web"
 default['hazelcast']['hazelcast.bootstrap.war.name'] = "openupf-hazelcast-bootstrap-web"
 default['hazelcast']['hazelcast.bootstrap.war.version'] = "02.01.00.00"
 
@@ -37,7 +37,7 @@ default['hazelcast']['hazelcast.mancenter.war.name'] = "hazelcast-mancenter"
 default['hazelcast']['hazelcast.mancenter.war.version'] = "3.2.3"
 
 # OpenUPF Hazelcast Bootstrap Config
-default['hazelcast']['openupf.hazelcast.bootstrap.config.jar.loc'] = "https://check-mike-check.com/mother/content/groups/Releases/com/capitalone/upf/openupf/hazelcast-bootstrap3/openupf-hazelcast-bootstrap-config"
+default['hazelcast']['openupf.hazelcast.bootstrap.config.jar.loc'] = "https://check-mike-check.com/mother/content/groups/Releases/com/checkmikecheck/upf/openupf/hazelcast-bootstrap3/openupf-hazelcast-bootstrap-config"
 default['hazelcast']['openupf.hazelcast.bootstrap.config.jar.name'] = "openupf-hazelcast-bootstrap-config"
 default['hazelcast']['openupf.hazelcast.bootstrap.config.jar.version'] = "02.01.00.00"
 
