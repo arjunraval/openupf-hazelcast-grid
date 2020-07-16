@@ -1,8 +1,5 @@
-#
-# Cookbook Name:: Hazelcast_Grid_Setup
-# Recipe:: default
-#
-# Copyright (c) 2015 The Authors, All Rights Reserved.
+#Default - Cookbook for all calls
+
 checksum_dir = node['javamsp']['checksum.file.location']
 log_prefix = "[Cookbook - openupf_hazelcast_grid][Recipe - default] : "
 appUser = node['javamsp']['appusers'][0][0]

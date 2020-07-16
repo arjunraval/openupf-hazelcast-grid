@@ -26,48 +26,48 @@ This cookbook should be used by applications looking for Hazelcast cache grid co
 
 --------------------	
 #### Hazelcast Spring Jar
-- ``` ['hazelcast']['hazelcast-spring.jar.loc'] ``` - Default value is  "https://nexus.kdc.capitalone.com/mother/content/groups/Releases/com/hazelcast/hazelcast-spring"
+- ``` ['hazelcast']['hazelcast-spring.jar.loc'] ``` - Default value is  "https://check-mike-check.com/mother/content/groups/Releases/com/hazelcast/hazelcast-spring"
 - ``` ['hazelcast']['hazelcast-spring.jar.name'] ``` - Default value is  "hazelcast-spring"
 - ``` ['hazelcast']['hazelcast-spring.jar.version'] ``` - Default value is  "3.2.3"
 
 --------------------	
 #### Hazelcast Jar
-- ``` ['hazelcast']['hazelcast.jar.loc'] ``` - Default value is  "https://nexus.kdc.capitalone.com/mother/content/groups/Releases/com/hazelcast/hazelcast"
+- ``` ['hazelcast']['hazelcast.jar.loc'] ``` - Default value is  "https://check-mike-check.com/mother/content/groups/Releases/com/hazelcast/hazelcast"
 - ``` ['hazelcast']['hazelcast.jar.name'] ``` - Default value is  "hazelcast"
 - ``` ['hazelcast']['hazelcast.jar.version'] ``` - Default value is  "3.2.3"
 
 --------------------	
 #### Hazelcast Bootstrap War
-- ``` ['hazelcast']['hazelcast.bootstrap.war.loc'] ``` - Default value is  "https://nexus.kdc.capitalone.com/mother/content/groups/Releases/com/capitalone/upf/openupf/hazelcast-bootstrap3/openupf-hazelcast-bootstrap-web"
+- ``` ['hazelcast']['hazelcast.bootstrap.war.loc'] ``` - Default value is  "https://check-mike-check.com/mother/content/groups/Releases/com/capitalone/upf/openupf/hazelcast-bootstrap3/openupf-hazelcast-bootstrap-web"
 - ``` ['hazelcast']['hazelcast.bootstrap.war.name'] ``` - Default value is  "openupf-hazelcast-bootstrap-web"
 - ``` ['hazelcast']['hazelcast.bootstrap.war.version'] ``` - Default value is  "02.01.00.00"
 
 --------------------	
 #### Hazelcast Mancenter War
-- ``` ['hazelcast']['hazelcast.mancenter.war.loc'] ``` - Default value is  "https://nexus.kdc.capitalone.com/mother/content/groups/Releases/com/hazelcast/hazelcast-mancenter"
+- ``` ['hazelcast']['hazelcast.mancenter.war.loc'] ``` - Default value is  "https://check-mike-check.com/mother/content/groups/Releases/com/hazelcast/hazelcast-mancenter"
 - ``` ['hazelcast']['hazelcast.mancenter.war.name'] ``` - Default value is  "hazelcast-mancenter"
 - ``` ['hazelcast']['hazelcast.mancenter.war.version'] ``` - Default value is  "3.2.3"
 
 --------------------	
 #### OpenUPF Hazelcast Bootstrap Config
-- ``` ['hazelcast']['openupf.hazelcast.bootstrap.config.jar.loc'] ``` - Default value is  "https://nexus.kdc.capitalone.com/mother/content/groups/Releases/com/capitalone/upf/openupf/hazelcast-bootstrap3/openupf-hazelcast-bootstrap-config"
+- ``` ['hazelcast']['openupf.hazelcast.bootstrap.config.jar.loc'] ``` - Default value is  "https://check-mike-check.com/mother/content/groups/Releases/com/capitalone/upf/openupf/hazelcast-bootstrap3/openupf-hazelcast-bootstrap-config"
 - ``` ['hazelcast']['openupf.hazelcast.bootstrap.config.jar.name'] ``` - Default value is  "openupf-hazelcast-bootstrap-config"
 - ``` ['hazelcast']['openupf.hazelcast.bootstrap.config.jar.version'] ``` - Default value is  "02.01.00.00"
 
 --------------------	
 #### log4j
-- ``` ['hazelcast']['log4j.jar.loc'] ``` - Default value is  "https://nexus.kdc.capitalone.com/mother/content/groups/Releases/log4j/log4j"
+- ``` ['hazelcast']['log4j.jar.loc'] ``` - Default value is  "https://check-mike-check.com/mother/content/groups/Releases/log4j/log4j"
 - ``` ['hazelcast']['log4j.jar.name'] ``` - Default value is  "log4j"
 - ``` ['hazelcast']['log4j.jar.version'] ``` - Default value is  "1.2.16"
 --------------------	
 #### slf4j api jar
-- ``` ['hazelcast']['slf4j.api.jar.loc'] ``` - Default value is  "https://nexus.kdc.capitalone.com/mother/content/groups/Releases/org/slf4j/slf4j-api"
+- ``` ['hazelcast']['slf4j.api.jar.loc'] ``` - Default value is  "https://check-mike-check.com/mother/content/groups/Releases/org/slf4j/slf4j-api"
 - ``` ['hazelcast']['slf4j.api.jar.name'] ``` - Default value is  "slf4j-api"
 - ``` ['hazelcast']['slf4j.api.jar.version'] ``` - Default value is  "1.6.4"
 
 --------------------	
 #### Tomcat Remote JMX Jar
-- ``` ['hazelcast']['tomcat.remote.jmx.jar.loc'] ``` - Default value is  "https://nexus.kdc.capitalone.com/mother/content/groups/Eval/org/apache/tomcat/tomcat-catalina-jmx-remote"
+- ``` ['hazelcast']['tomcat.remote.jmx.jar.loc'] ``` - Default value is  "https://check-mike-check.com/mother/content/groups/Eval/org/apache/tomcat/tomcat-catalina-jmx-remote"
 - ``` ['hazelcast']['tomcat.remote.jmx.jar.name'] ``` - Default value is  "tomcat-catalina-jmx-remote"
 - ``` ['hazelcast']['tomcat.remote.jmx.jar.version'] ``` - Default value is  "7.0.42"
 
