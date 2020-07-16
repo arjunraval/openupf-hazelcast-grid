@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+  <!-- Log file for application categories. -->
+   
+  <appender name="APPLOGFILE" class="org.apache.log4j.RollingFileAppender">
+    <param name="File"   value="<%= @domain_dir %>/logs/epf_app.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="10000KB" />
+    <param name="MaxBackupIndex" value="20"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{DATE} %-5p %-15c{1}: %m%n"/>
+    </layout>
+  </appender>
+
+  <!-- Log file for 3rd party libraries -->
+  <appender name="SYSLOGFILE" class="org.apache.log4j.RollingFileAppender">
+    <param name="File"   value="<%= @domain_dir %>/logs/epf_sys.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="10000KB" />
+    <param name="MaxBackupIndex" value="20"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{DATE} %-5p %-15c{1} [%t][%x]: %m%n"/>
+    </layout>
+               <filter class="org.apache.log4j.varia.LevelRangeFilter">
+                   <param name="levelMin" value="ERROR" />
+                   <param name="levelMax" value="ERROR" />
+               </filter>
+  </appender>
+  
+   <!-- Log file for 3rd party libraries -->
+  <appender name="PERFLOGFILE" class="org.apache.log4j.RollingFileAppender">
+    <param name="File"   value="<%= @domain_dir %>/logs/epf_perf.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="10000KB" />
+    <param name="MaxBackupIndex" value="20"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{DATE} %-5p %-15c{1} [%t][%x]: %m%n"/>
+    </layout>
+  </appender>
+  
+  <!-- Audit Error Logs -->
+  <appender name="AUDITLOGFILE" class="org.apache.log4j.RollingFileAppender">
+    <param name="File"   value="<%= @domain_dir %>/logs/audit_errors/epf_audit_errors.log" />
+    <param name="Append" value="true" />
+    <param name="DatePattern" value=".yyyy-MM-dd-a"/> <!-- Rollover at midnight (12am) and midday (12pm) -->
+    <param name="MaxFileSize" value="50MB" />
+    <param name="DateRollEnforced" value="true"/>
+    <param name="MaxRollFileCount" value="20"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{DATE} %-5p %-15c{1} [%t][%x]: %m%n"/>
+    </layout>
+  </appender>
+
+<!-- Audit Forward Error Logs -->
+  <appender name="AUDITFORWARDLOGFILE" class="org.apache.log4j.RollingFileAppender">
+    <param name="File"   value="${epf.config.root}/../logs/audit_forward_errors/epf_audit_forward_errors.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="50MB" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{DATE} %-5p %-15c{1} [%t][%x]: %m%n"/>
+    </layout>
+  </appender>
+
+    
+  <!-- Log file for RTM -->
+  <appender name="WSTRACEFILE" class="org.apache.log4j.RollingFileAppender">
+    <param name="File"   value="<%= @domain_dir %>/logs/epf_wstrace.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="10000KB" />
+    <param name="MaxBackupIndex" value="20"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{DATE} %-5p %-15c{1}: %m%n"/>
+    </layout>
+  </appender>
+
+  <!-- ******************************************* -->
+  <!-- application categories                      -->
+  <!-- ******************************************* -->  
+  <category name="com.capitalone">
+     <priority value="info" />
+     <appender-ref ref="APPLOGFILE" />
+     <appender-ref ref="SYSLOGFILE" />
+  </category>
+  
+  <!-- ******************************************* -->
+  <!-- Hazelcast cache categories                  -->
+  <!-- ******************************************* -->  
+  <category name="com.hazelcast" additivity="false">
+     <priority value="INFO" />
+     <appender-ref ref="APPLOGFILE" />
+  </category>     
+  
+  <!-- ******************************************* -->
+  <!-- audit log categories                      -->
+  <!-- ******************************************* -->
+<category name="com.capitalone.epf.audit.error.AuditErrorListener" additivity="false">
+     <priority value="INFO" />
+     <appender-ref ref="AUDITLOGFILE" />
+  </category>
+ 
+    <!-- ******************************************* -->
+  <!-- audit forward log categories                      -->
+  <!-- ******************************************* -->
+  <category name="com.capitalone.epf.audit.service.util.AuditFileCapture" additivity="false">
+     <priority value="INFO" />
+     <appender-ref ref="AUDITFORWARDLOGFILE" />
+ </category>
+
+  <!-- ******************************************* -->
+  <!-- Enable WebService tracing                   -->
+  <!-- ******************************************* -->  
+  <category name="com.capitalone.epf.servicelocator.handlers.EPFJaxWsLoggingHandler" additivity="false">
+     <priority value="info" />
+     <appender-ref ref="WSTRACEFILE" />
+  </category>
+  <category name="com.capitalone.epf.servicelocator.handlers.EPFJaxWsSamlSecurityHandler" additivity="false">
+     <priority value="info" />
+     <appender-ref ref="WSTRACEFILE" />
+  </category>
+
+
+<!-- ********************************************* -->
+<!-- Setup the loggers for the performance metrics -->
+<!-- ********************************************* -->
+  <category name="com.capitalone.epf.logging.aspects.ProfileAspect" additivity="false">
+     <priority value="info" />
+     <appender-ref ref="PERFLOGFILE" />
+  </category>
+<category name="com.capitalone.epf.logging.interceptor.EPFProfileInterceptor" additivity="false">
+     <priority value="info" />
+     <appender-ref ref="PERFLOGFILE" />
+  </category>
+
+  <root>
+    <priority value="fatal" />
+  </root>
+
+</log4j:configuration>
